@@ -8,7 +8,7 @@ pipeline{
         }
         stage("deployee"){
             steps{
-                bat 'copy dis/mypackage-0.0.1-py3-none-any.whl newwheel.whl'
+                bat 'git init'
             }
         }
     }
