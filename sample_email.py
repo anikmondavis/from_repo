@@ -8,7 +8,7 @@ def mail(messages):
     email_sender = "jandj808946@gmail.com"
     password = "mdryhbbgtnbperdt"
     subject = "Azure Synapse Status Log"
-    emails=['jandj808946@gmail.com',"jhenkar.hg@knowledgelens.com"]
+    emails=['anikdavis@gmail,com',"anikdavis18@gmail.com"]
     email_message = MIMEMultipart()
     email_message['Subject'] = subject
     email_message['From'] = email_sender
