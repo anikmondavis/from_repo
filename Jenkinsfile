@@ -8,8 +8,8 @@ pipeline{
         }
         stage("deployee"){
             steps{
-                bat 'git remote add origin "https://github.com/anikmondavis/Deployee_Jenkins.git"'
-                bat 'git push -u main main'
+                git remote add origin "https://github.com/anikmondavis/Deployee_Jenkins.git"
+                git push -u main main
                
             }
         }
