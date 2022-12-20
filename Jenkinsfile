@@ -8,7 +8,8 @@ pipeline{
         }
         stage("deployee"){
             steps{
-                echo "deployee"
+                git add .
+                git commit -m "new commit"    
             }
         }
     }
