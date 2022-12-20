@@ -1,19 +1,19 @@
 pipeline{
     agent any
-    stage{
+    stages{
         stage("build"){
             steps{
-                sh "python sample_email.py"
+                bat 'python sample_email.py'
             }
         }
         stage("deployee"){
             steps{
-                sh "git init"
-                sh "git add ."
-                sh 'git commit -m "first commit"'
-                sh "git branch -M main"
-                sh "git remote add origin https://github.com/anikmondavis/Deployee_Jenkins.git"
-                sh "git push -u origin main"
+                bat 'git init'
+                bat 'git add .'
+                bat 'git commit -m "first commit"'
+                bat 'git branch -M main'
+                bat 'git remote add origin https://github.com/anikmondavis/Deployee_Jenkins.git'
+                bat 'git push -u origin main'
             }
         }
     }
