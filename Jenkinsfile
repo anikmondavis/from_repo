@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("build"){
             steps{
-                bat 'python sample_email.py'
+                bat 'python setup.py bdist_wheel'
             }
         }
         stage("deployee"){
