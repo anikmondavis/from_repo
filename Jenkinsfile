@@ -8,7 +8,7 @@ pipeline{
         }
         stage("deployee"){
             steps{
-                bat 'git init'
+                sh 'git add --all'
             }
         }
     }
