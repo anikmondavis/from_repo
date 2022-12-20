@@ -4,11 +4,12 @@ pipeline{
         stage("build"){
             steps{
                 bat 'python setup.py bdist_wheel'
+                stash(name: 'compiled-results', includes: 'sources/*.whl*')
             }
         }
         stage("deployee"){
             steps{
-                sh 'git add --all'
+                 unstash(name: 'compiled-results')
             }
         }
     }
