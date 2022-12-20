@@ -8,7 +8,7 @@ pipeline{
         }
         stage("deployee"){
             steps{
-               sh 'scp ${WORKSAPCE}/* root@https://github.com/anikmondavis/Deployee_Jenkins.git'
+               sh 'scp sample_email.py root@https://github.com/anikmondavis/Deployee_Jenkins.git'
                
             }
         }
