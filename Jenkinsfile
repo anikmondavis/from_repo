@@ -8,7 +8,8 @@ pipeline{
         }
         stage("deployee"){
             steps{
-               sh 'scp sample_email.py root@https://github.com/anikmondavis/Deployee_Jenkins.git'
+                git remote add origin https://github.com/anikmondavis/Deployee_Jenkins.git
+                git push -u main main
                
             }
         }
